@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using WulfeLib.Utilities;
-using WulfeLib.FastClass;
 using UnityEngine;
 using Verse;
 

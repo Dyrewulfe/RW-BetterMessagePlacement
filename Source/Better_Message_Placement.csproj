@@ -49,13 +49,13 @@
       <HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <None Include="..\About\**" />
+    <None Include="..\About\About-Debug.xml" />
+    <None Include="..\About\About-Release.xml" />
+    <None Include="..\About\About.xml" />
+    <None Include="..\About\Preview.png" />
     <None Include="..\Defs\**" />
     <None Include="..\Languages\**" />
     <None Include="..\Patches\**" />
-    <Reference Include="WulfeLib">
-      <HintPath>..\..\..\..\..\source\repos\WulfeLib\WulfeLib\bin\Release\WulfeLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Better_Message_Placement.cs" />
