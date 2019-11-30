@@ -2,7 +2,7 @@
 <ModMetaData>
 	<name>Better Message Placement</name>
 	<author>Dyrewulfe</author>
-	<targetVersion>1.0.0</targetVersion>
+	<targetVersion>1.2.0</targetVersion>
 	<description>Dynamically adjusts the location messages are written at, to avoid blocking the colonist bar.</description>
-	<url>https://steamcommunity.com/id/Dyrewulfe/myworkshopfiles/?appid=294100</url>
+	<url>https://github.com/Dyrewulfe/RW-BetterMessagePlacement</url>
 </ModMetaData>

@@ -51,7 +51,7 @@ namespace Better_Message_Placement
                 static int YOffsetAdjustment()
                 {
                     int offset = (int)Messages.MessagesTopLeftStandard.y;
-                    if (Current.Game != null)
+                    if (Find.CurrentMap != null)
                     {
                         float scale = Find.ColonistBar.Scale;
                         int rows = 3;

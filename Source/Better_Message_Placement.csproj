@@ -52,7 +52,6 @@
     <None Include="..\About\About-Debug.xml" />
     <None Include="..\About\About-Release.xml" />
     <None Include="..\About\About.xml" />
-    <None Include="..\About\Preview.png" />
     <None Include="..\Defs\**" />
     <None Include="..\Languages\**" />
     <None Include="..\Patches\**" />
