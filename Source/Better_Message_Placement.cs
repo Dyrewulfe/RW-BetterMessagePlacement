@@ -16,7 +16,7 @@ namespace Better_Message_Placement
         static class HarmonyPatches
         {
 
-            static HarmonyInstance harmony = HarmonyInstance.Create("rimworld.dyrewulfe.NAME");
+            static HarmonyInstance harmony = HarmonyInstance.Create("rimworld.dyrewulfe.bettermessageplacement");
 
             static HarmonyPatches()
             {
