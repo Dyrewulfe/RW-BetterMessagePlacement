@@ -20,7 +20,7 @@ namespace Better_Message_Placement
 
             static HarmonyPatches()
             {
-                HarmonyInstance.DEBUG = true;
+                //HarmonyInstance.DEBUG = true;
                 harmony.PatchAll();
             }
 
