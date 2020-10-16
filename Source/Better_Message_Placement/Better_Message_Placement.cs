@@ -1,5 +1,4 @@
-﻿using Harmony;
-using RimWorld;
+﻿using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -16,11 +15,10 @@ namespace Better_Message_Placement
         static class HarmonyPatches
         {
 
-            static HarmonyInstance harmony = HarmonyInstance.Create("rimworld.dyrewulfe.bettermessageplacement");
+            static readonly Harmony harmony = new Harmony("rimworld.dyrewulfe.bettermessageplacement");
 
             static HarmonyPatches()
             {
-                //HarmonyInstance.DEBUG = true;
                 harmony.PatchAll();
             }
 
@@ -35,16 +33,17 @@ namespace Better_Message_Placement
                     foreach (var code in instructions)
                     {
                         yield return code;
-                        if (!patched)
+                        if (patched)
                         {
-                            if (prev.opcode == OpCodes.Ldfld && prev.operand == vector2_y)
-                            {
-                                patched = true;
-                                yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(Messages_MessagesDoGUI_Patch), nameof(YOffsetAdjustment)));
-                                yield return new CodeInstruction(OpCodes.Add);
-                            }
-                            prev = code;
+                            continue;
                         }
+                        if (prev.opcode == OpCodes.Ldfld && (FieldInfo)prev.operand == vector2_y)
+                        {
+                            patched = true;
+                            yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(Messages_MessagesDoGUI_Patch), nameof(YOffsetAdjustment)));
+                            yield return new CodeInstruction(OpCodes.Add);
+                        }
+                        prev = code;
                     }
                 }
 
@@ -68,7 +67,7 @@ namespace Better_Message_Placement
                     return offset;
                 }
 
-                static FieldInfo vector2_y = AccessTools.Field(typeof(Vector2), "y");
+                static readonly FieldInfo vector2_y = AccessTools.Field(typeof(Vector2), "y");
             }
         }
     }
