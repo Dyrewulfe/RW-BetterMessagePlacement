@@ -24,3 +24,4 @@ Dynamically adjusts the location messages are written at, to avoid blocking the 
 
 If you use  https://steamcommunity.com/sharedfiles/filedetails/?id=2345493945] [LTO] Colony Groups use  https://steamcommunity.com/sharedfiles/filedetails/?id=2392574347] Dynamic Message Positioning by pointfeev instead
 
+
